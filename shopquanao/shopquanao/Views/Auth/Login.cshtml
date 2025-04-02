@@ -1,0 +1,143 @@
+﻿@{
+    ViewBag.Title = "Đăng Nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="login-container">
+    @if (Session["Username"] == null) // Nếu người dùng chưa đăng nhập
+    {
+        <h2>Đăng Nhập</h2>
+        using (Html.BeginForm("Login", "Auth", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <input type="text" name="username" placeholder="Tên Truy Cập" required />
+            <input type="password" name="password" placeholder="Mật Khẩu" required />
+            <button type="submit">Đăng Nhập</button>
+
+            if (ViewBag.Error != null)
+            {
+                <p class="error">@ViewBag.Error</p>
+            }
+
+            if (TempData["Success"] != null)
+            {
+                <p class="success">@TempData["Success"]</p>
+            }
+
+            <div class="links">
+                <a href="@Url.Action("ResetPassword", "Auth")">Quên Mật Khẩu?</a><br />
+                <a href="@Url.Action("Register", "Auth")">Tạo Tài Khoản</a>
+            </div>
+        }
+    }
+    else // Nếu người dùng đã đăng nhập
+    {
+        <div class="user-info">
+            <i class="fas fa-user-circle user-icon"></i>
+            <h3>@Session["Username"]</h3>
+            <a href="@Url.Action("Logout", "Auth")" class="logout-button">Đăng Xuất</a>
+        </div>
+    }
+</div>
+
+<style>
+    .login-container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .login-container button:hover {
+                background-color: #b71c1c;
+            }
+
+        .login-container .error {
+            color: red;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .login-container .success {
+            color: green;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .login-container .links {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+            .login-container .links a {
+                color: #1976d2;
+                text-decoration: none;
+            }
+
+                .login-container .links a:hover {
+                    text-decoration: underline;
+                }
+
+    /* CSS cho phần hiển thị thông tin người dùng đã đăng nhập */
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-icon {
+        font-size: 160px; /* Kích thước biểu tượng người dùng */
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .user-info h3 {
+        margin: 10px 0;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .logout-button {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        background-color: #d32f2f;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+        .logout-button:hover {
+            background-color: #b71c1c;
+        }
+</style>

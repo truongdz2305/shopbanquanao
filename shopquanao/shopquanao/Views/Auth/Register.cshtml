@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Đăng Ký";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="register-container">
+    <h2>Đăng Ký</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <p class="error">@ViewBag.Error</p>
+    }
+
+    @using (Html.BeginForm("Register", "Auth", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <input type="text" name="username" placeholder="Nhập tên tài khoản" required />
+        <input type="email" name="email" placeholder="Nhập Email" required />
+        <input type="password" name="newPassword" placeholder="Nhập mật khẩu" required />
+        <input type="password" name="confirmPassword" placeholder="Nhập lại mật khẩu" required />
+        <button type="submit">Đăng Ký Ngay</button>
+    }
+</div>
+
+<style>
+    .register-container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .register-container button:hover {
+                background-color: #b71c1c;
+            }
+
+        .register-container .error {
+            color: red;
+            margin: 10px 0;
+        }
+</style>
