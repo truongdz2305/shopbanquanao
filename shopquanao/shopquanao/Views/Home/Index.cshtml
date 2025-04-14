@@ -1,33 +1,481 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavigato.cshtml";
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Favorites</title>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="~/assest/js/test.js"></script>
+
+    <!-- FontAwesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/assest/css/page2.css">
+</head>
+<body class="bg-white text-gray-800">
+    <div class="banner">
+        <img src="../assest/img/Banner.png" alt="Banner" style="width: 100%; height: auto;" />
     </div>
-</main>
+
+    <div class="container mx-auto px-4 py-8">
+        <!-- Customer Favorites -->
+        <div class="text-center mb-8">
+            <h2 class="text-red-500 text-sm font-bold">CUSTOMER FAVORITES</h2>
+            <h1 class="text-4xl font-bold">Popular Categories</h1>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <a href="#" class="mx-auto mb-4 block relative">
+                    <img src="../assest/img/humburger.png" alt="Main Dish" class="mx-auto" width="100" height="100">
+                    <img src="../assest/img/t1.png" alt="Icon t1" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12">
+                </a>
+                <h3 class="font-bold text-lg">Main Dish</h3>
+                <p class="text-gray-500">(86 dishes)</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <a href="#" class="mx-auto mb-4 block relative">
+                    <img src="../assest/img/banh_mi.png" alt="Break Fast" class="mx-auto" width="100" height="100">
+                    <img src="../assest/img/t2.png" alt="Icon t2" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12">
+                </a>
+                <h3 class="font-bold text-lg">Break Fast</h3>
+                <p class="text-gray-500">(12 break fast)</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <a href="#" class="mx-auto mb-4 block relative">
+                    <img src="../assest/img/kem.png" alt="Dessert" class="mx-auto" width="100" height="100">
+                    <img src="../assest/img/t3.png" alt="Icon t3" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12">
+                </a>
+                <h3 class="font-bold text-lg">Dessert</h3>
+                <p class="text-gray-500">(48 dessert)</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <a href="#" class="mx-auto mb-4 block relative">
+                    <img src="../assest/img/nuoc_cam.png" alt="Browse All" class="mx-auto" width="100" height="100">
+                    <img src="../assest/img/t4.png" alt="Icon t4" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12">
+                </a>
+                <h3 class="font-bold text-lg">Browse All</h3>
+                <p class="text-gray-500">(255 Items)</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <a href="#" class="mx-auto mb-4 block relative">
+                    <img src="../assest/img/salad.png" alt="Breakfast Food" class="mx-auto" width="100" height="100">
+                    <img src="../assest/img/t5.png" alt="Icon t5" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12">
+                </a>
+                <h3 class="font-bold text-lg">Breakfast Food</h3>
+                <p class="text-gray-500">(205 Items)</p>
+            </div>
+        </div>
+
+        <!-- Daily Best Sells -->
+        <div class="bg-gray-100">
+            <div class="container mx-auto p-4">
+                <h1 class="text-3xl font-bold mb-4">Daily Best Sells</h1>
+                <div class="flex flex-wrap -mx-2 items-stretch">
+                    <!-- Left Banner -->
+                    <div class="w-full md:w-1/4 p-2 flex">
+                        <div class="bg-green-900 text-white rounded-lg p-6 flex flex-col justify-between w-full" style="background-image: url('../assest/img/div.banner-img\ \(1\).png'); background-size: cover; background-position: center;">
+                            <div>
+                                <h2 class="text-3xl font-bold mb-4" style="margin-top: 50px; font-family: Arial, Helvetica, sans-serif;">
+                                    Bring nature <br>into your <br>home
+                                </h2>
+                            </div>
+                            <div>
+                                <button class="bg-red-500 text-white py-2 px-4 rounded-lg">
+                                    Shop Now →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Cards -->
+                    <div class="w-full md:w-3/4 p-2 flex flex-col">
+                        <div class="flex justify-end mb-4">
+                            <div class="flex space-x-4">
+                                <a class="text-green-500 font-bold active" href="#">Featured</a>
+                                <a class="text-gray-500" href="#">Popular</a>
+                                <a class="text-gray-500" href="#">New added</a>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <!-- Product Card 1 -->
+                            <div class="bg-white rounded-lg shadow p-4 relative flex flex-col justify-between">
+                                <div>
+                                    <div class="absolute top-0 left-0 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-br-lg">
+                                        Save 35%
+                                    </div>
+                                    <img alt="Unsweetened Coconut Flakes" class="w-full h-40 object-contain mb-4" src="../assest/img/product1.png" />
+                                    <h3 class="text-gray-500">Hodo Foods</h3>
+                                    <h2 class="text-lg font-bold mb-2">All Natural Italian-Style Chicken Meatballs</h2>
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-green-500 text-xl font-bold mr-2">$238.85</span>
+                                        <span class="text-gray-500 line-through">$245.8</span>
+                                    </div>
+                                    <div class="text-gray-500 mb-2">Sold: 90/120</div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+                                        <div class="bg-red-500 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <button class="bg-red-500 text-white py-2 px-4 rounded-lg w-full">Add To Cart</button>
+                            </div>
+                            <!-- Product Card 2 -->
+                            <div class="bg-white rounded-lg shadow p-4 relative flex flex-col justify-between">
+                                <div>
+                                    <div class="absolute top-0 left-0 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-br-lg">
+                                        Sale
+                                    </div>
+                                    <img alt="Boomchickapop Sweet and Wommies" class="w-full h-40 object-contain mb-4" src="../assest/img/product2.png" />
+                                    <h3 class="text-gray-500">Hodo Foods</h3>
+                                    <h2 class="text-lg font-bold mb-2">Angie’s Boomchickapop Sweet and Wommies</h2>
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-green-500 text-xl font-bold mr-2">$238.85</span>
+                                        <span class="text-gray-500 line-through">$245.8</span>
+                                    </div>
+                                    <div class="text-gray-500 mb-2">Sold: 90/120</div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+                                        <div class="bg-red-500 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <button class="bg-red-500 text-white py-2 px-4 rounded-lg w-full">Add To Cart</button>
+                            </div>
+                            <!-- Product Card 3 -->
+                            <div class="bg-white rounded-lg shadow p-4 relative flex flex-col justify-between">
+                                <div>
+                                    <div class="absolute top-0 left-0 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-br-lg">
+                                        Best sale
+                                    </div>
+                                    <img alt="Foster Farms Takeout Crispy Classic" class="w-full h-40 object-contain mb-4" src="../assest/img/product3.png" />
+                                    <h3 class="text-gray-500">Hodo Foods</h3>
+                                    <h2 class="text-lg font-bold mb-2">Foster Farms Takeout Crispy Classic</h2>
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-green-500 text-xl font-bold mr-2">$238.85</span>
+                                        <span class="text-gray-500 line-through">$245.8</span>
+                                    </div>
+                                    <div class="text-gray-500 mb-2">Sold: 90/120</div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+                                        <div class="bg-red-500 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <button class="bg-red-500 text-white py-2 px-4 rounded-lg w-full">Add To Cart</button>
+                            </div>
+                            <!-- Product Card 4 -->
+                            <div class="bg-white rounded-lg shadow p-4 relative flex flex-col justify-between">
+                                <div>
+                                    <div class="absolute top-0 left-0 bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded-br-lg">
+                                        Save 15%
+                                    </div>
+                                    <img alt="Blue Diamond Almonds Lightly Salted" class="w-full h-40 object-contain mb-4" src="../assest/img/product4.png" />
+                                    <h3 class="text-gray-500">Hodo Foods</h3>
+                                    <h2 class="text-lg font-bold mb-2">Blue Diamond Almonds Lightly Salted</h2>
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-green-500 text-xl font-bold mr-2">$238.85</span>
+                                        <span class="text-gray-500 line-through">$245.8</span>
+                                    </div>
+                                    <div class="text-gray-500 mb-2">Sold: 90/120</div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+                                        <div class="bg-red-500 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <button class="bg-red-500 text-white py-2 px-4 rounded-lg w-full">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white text-gray-900">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-red-500 uppercase tracking-widest font-semibold">Special Dishes</p>
+                        <h1 class="text-4xl font-bold mt-2">
+                            Standout Dishes
+                            <br />
+                            From Our Menu
+                        </h1>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="bg-gray-200 text-gray-500 rounded-full p-2 mx-2 hover:bg-red-500 hover:text-white transition-colors duration-300">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="bg-gray-200 text-gray-500 rounded-full p-2 mx-2 hover:bg-red-500 hover:text-white transition-colors duration-300">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-white rounded-lg shadow-lg p-4 relative">
+                        <img alt="Fattoush salad" class="w-32 h-32 mx-auto rounded-full" height="300" src="../assest/img/salad1.png" width="300" />
+                        <div class="absolute top-0 right-0 bg-gray-300 text-gray-500 rounded-bl-lg p-2 heart-icon" onclick="toggleHeart(this)">
+                            <i class="fas fa-heart"></i>
+                        </div>
+
+                        <h2 class="text-xl font-semibold mt-4 text-center">Fattoush salad</h2>
+                        <p class="text-gray-500 text-center">Description of the item</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-4 relative">
+                        <img alt="Vegetable salad" class="w-32 h-32 mx-auto rounded-full" height="300" src="../assest/img/salad2.png" width="300" />
+                        <div class="absolute top-0 right-0 bg-gray-300 text-gray-500 rounded-bl-lg p-2 heart-icon" onclick="toggleHeart(this)">
+                            <i class="fas fa-heart"></i>
+                        </div>
+
+                        <h2 class="text-xl font-semibold mt-4 text-center">Vegetable salad</h2>
+                        <p class="text-gray-500 text-center">Description of the item</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-4 relative">
+                        <img alt="Egg vegi salad" class="w-32 h-32 mx-auto rounded-full" height="300" src="../assest/img/salad3.png" width="300" />
+                        <div class="absolute top-0 right-0 bg-gray-300 text-gray-500 rounded-bl-lg p-2 heart-icon" onclick="toggleHeart(this)">
+                            <i class="fas fa-heart"></i>
+                        </div>
+
+                        <h2 class="text-xl font-semibold mt-4 text-center">Egg vegi salad</h2>
+                        <p class="text-gray-500 text-center">Description of the item</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-50">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-gray-800">Deals Of The Day</h1>
+                    <a class="text-gray-500 hover:text-gray-800" href="#">All Deals &gt;</a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Card 1 -->
+                    <div class="deal-card">
+                        <img src="../assest/img/rau.png" alt="A variety of fresh vegetables and fruits including kale, cucumber, and citrus slices" class="deal-image">
+                        <div class="deal-content">
+                            <h2 class="deal-title">Seeds of Change Organic Quinoa, Brown, &amp; Red Rice</h2>
+                            <div class="deal-rating">
+                                <i class="fas fa-star text-yellow-500"></i>
+                                <span>(4.0)</span>
+                            </div>
+                            <p class="deal-by">
+                                By <a href="#">NestFood</a>
+                            </p>
+                            <div class="deal-price">
+                                <span class="deal-current-price">$32.85</span>
+                                <span class="deal-old-price">$33.8</span>
+                                <button class="deal-add-button">
+                                    <i class="fas fa-shopping-cart"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="deal-card">
+                        <img src="../assest/img/rau1.png" alt="Sliced oranges and pomegranate seeds arranged on a surface" class="deal-image">
+                        <div class="deal-content">
+                            <h2 class="deal-title">Perdue Simply Smart Organics Gluten Free</h2>
+                            <div class="deal-rating">
+                                <i class="fas fa-star text-yellow-500"></i>
+                                <span>(4.0)</span>
+                            </div>
+                            <p class="deal-by">
+                                By <a href="#">Old El Paso</a>
+                            </p>
+                            <div class="deal-price">
+                                <span class="deal-current-price">$24.85</span>
+                                <span class="deal-old-price">$26.8</span>
+                                <button class="deal-add-button">
+                                    <i class="fas fa-shopping-cart"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="deal-card">
+                        <img src="../assest/img/rau2.png" alt="A bowl of green peas on a wire rack with scattered peas around" class="deal-image">
+                        <div class="deal-content">
+                            <h2 class="deal-title">Signature Wood-Fired Mushroom and Caramelized</h2>
+                            <div class="deal-rating">
+                                <i class="fas fa-star text-yellow-500"></i>
+                                <span>(3.0)</span>
+                            </div>
+                            <p class="deal-by">
+                                By <a href="#">Progresso</a>
+                            </p>
+                            <div class="deal-price">
+                                <span class="deal-current-price">$12.85</span>
+                                <span class="deal-old-price">$13.8</span>
+                                <button class="deal-add-button">
+                                    <i class="fas fa-shopping-cart"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="deal-card">
+                        <img src="../assest/img/rau3.png" alt="Sliced citrus fruits and a knife on a cutting board" class="deal-image">
+                        <div class="deal-content">
+                            <h2 class="deal-title">Simply Lemonade with Raspberry Juice</h2>
+                            <div class="deal-rating">
+                                <i class="fas fa-star text-yellow-500"></i>
+                                <span>(3.0)</span>
+                            </div>
+                            <p class="deal-by">
+                                By <a href="#">Yoplait</a>
+                            </p>
+                            <div class="deal-price">
+                                <span class="deal-current-price">$15.85</span>
+                                <span class="deal-old-price">$16.8</span>
+                                <button class="deal-add-button">
+                                    <i class="fas fa-shopping-cart"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white flex items-center justify-center min-h-screen">
+            <div class="container mx-auto p-4 flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 p-4">
+                    <img alt="A plate of salad with grilled chicken, tomatoes, and mozzarella balls, with a small bowl of sauce and a tomato in the background" class="rounded-lg shadow-lg" src="../assest/img/bua_sang.png" />
+                </div>
+                <div class="w-full md:w-1/2 p-4">
+                    <h2 class="text-3xl font-bold mb-6">
+                        Why People Choose us?
+                    </h2>
+                    <div class="mb-4 p-4 bg-white rounded-lg shadow-md flex items-start">
+                        <div class="text-yellow-500 text-3xl mr-4">
+                            <a href="#"> <img src="../assest/img/shipper.png" alt=""></a>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">
+                                Convenient and Reliable
+                            </h3>
+                            <p class="text-gray-600">
+                                Whether you dine in, take out, or order delivery, our service is convenient, fast, and reliable, making mealtime hassle-free.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-4 p-4 bg-white rounded-lg shadow-md flex items-start">
+                        <div class="text-yellow-500 text-3xl mr-4">
+                            <a href="#"> <img src="../assest/img/menu.png" alt=""></a>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">
+                                Variety of Options
+                            </h3>
+                            <p class="text-gray-600">
+                                From hearty meals to light snacks, we offer a wide range of options to suit every taste and craving.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-4 p-4 bg-white rounded-lg shadow-md flex items-start">
+                        <div class="text-yellow-500 text-3xl mr-4">
+                            <a href="#"> <img src="../assest/img/humburger2.png" alt=""></a>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">
+                                Eat Burger
+                            </h3>
+                            <p class="text-gray-600">
+                                Our burgers are grilled to perfection, with juicy patties and flavorful toppings that make every bite a delicious experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100">
+            <div class="relative p-10 rounded-lg flex flex-col md:flex-row items-center justify-between text-white" style="background-image: url('../assest/img/footer.png'); background-size: cover;">
+                <div class="md:w-1/2 flex flex-col justify-center">
+                    <div class="flex items-center bg-white rounded-full p-2 shadow-md mt-44 w-3/4 h-16">
+                        <i class="fas fa-envelope text-gray-400 ml-4"></i>
+                        <input class="flex-grow p-2 text-gray-700 focus:outline-none" placeholder="Your email address" type="email" />
+                        <button class="bg-red-500 text-white rounded-full px-6 py-2 ml-2">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center">
+                    <p class="w-80 h-80 object-cover rounded-lg"></p>
+                </div>
+            </div>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-5 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                    <img alt="Best prices &amp; offers icon" class="w-12 h-12 mr-4" src="../assest/img/monney.png" />
+                    <div>
+                        <h3 class="font-bold text-lg">
+                            Best prices &amp; offers
+                        </h3>
+                        <p class="text-gray-600">
+                            Orders $50 or more
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                    <img alt="Free delivery icon" class="w-12 h-12 mr-4" src="../assest/img/monney1.png" />
+                    <div>
+                        <h3 class="font-bold text-lg">
+                            Free delivery
+                        </h3>
+                        <p class="text-gray-600">
+                            24/7 amazing services
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                    <img alt="Great daily deal icon" class="w-12 h-12 mr-4" src="../assest/img/monney2.png" />
+                    <div>
+                        <h3 class="font-bold text-lg">
+                            Great daily deal
+                        </h3>
+                        <p class="text-gray-600">
+                            When you sign up
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                    <img alt="Wide assortment icon" class="w-12 h-12 mr-4" src="../assest/img/monney3.png" />
+                    <div>
+                        <h3 class="font-bold text-lg">
+                            Wide assortment
+                        </h3>
+                        <p class="text-gray-600">
+                            Mega Discounts
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
+                    <img alt="Easy returns icon" class="w-12 h-12 mr-4" src="../assest/img/monney4.png" />
+                    <div>
+                        <h3 class="font-bold text-lg">
+                            Easy returns
+                        </h3>
+                        <p class="text-gray-600">
+                            Within 30 days
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.active {
+    color: #10B981 !important; /* Tăng độ ưu tiên */
+    font-weight: bold;
+}
+
+a:not(.active) {
+    color: #6B7280 !important; /* Tăng độ ưu tiên */
+}
+
+.heart-icon {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.heart-icon.active {
+    background-color: #ef4444;
+    color: red;
+    color: #ffffff;
+}
+
+.deal-card {
+    position: relative;
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .deal-image {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+  }
+  
+  .deal-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem;
+  }
+  
+  .deal-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1f2937; /* text-gray-800 */
+  }
+  
+  .deal-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #6b7280; /* text-gray-600 */
+  }
+  
+  .deal-rating i {
+    color: #f59e0b; /* text-yellow-500 */
+  }
+  
+  .deal-by {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #6b7280; /* text-gray-500 */
+  }
+  
+  .deal-by a {
+    color: #10b981; /* text-green-500 */
+    text-decoration: none;
+  }
+  
+  .deal-by a:hover {
+    text-decoration: underline;
+  }
+  
+  .deal-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+  
+  .deal-current-price {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #10b981; /* text-green-500 */
+  }
+  
+  .deal-old-price {
+    text-decoration: line-through;
+    font-size: 0.875rem;
+    color: #6b7280; /* text-gray-500 */
+  }
+  
+  .deal-add-button {
+    background: #ef4444; /* bg-red-500 */
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+  }
+  
+  .deal-add-button:hover {
+    background: #dc2626; /* hover:bg-red-600 */
+  }
+  
+  .deal-add-button i {
+    margin-right: 0.25rem;
+  }

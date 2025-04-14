@@ -1,0 +1,23 @@
+/* styles.css */
+/* Nếu cần style thêm ngoài Tailwind thì viết ở đây */
+
+/* Ví dụ: Hover link đổi màu */
+footer a:hover {
+    color: #f87171; /* màu đỏ nhạt */
+  }
+  
+  /* Input focus thêm border màu đỏ */
+  footer input:focus {
+    border-color: #f87171;
+  }
+  
+  /* Icon social mạng hover */
+  footer .fab:hover {
+    color: #f87171;
+  }
+  
+  /* Button gửi có hover */
+  footer button:hover {
+    background-color: #f87171;
+  }
+  

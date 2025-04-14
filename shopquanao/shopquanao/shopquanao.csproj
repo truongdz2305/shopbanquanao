@@ -171,6 +171,66 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assest\css\layout_footer.css" />
+    <Content Include="assest\css\page2.css" />
+    <Content Include="assest\css\page3.css" />
+    <Content Include="assest\css\test.css" />
+    <Content Include="assest\img\18 →  → 1.jpg.png" />
+    <Content Include="assest\img\18 →  → 2.jpg.png" />
+    <Content Include="assest\img\18 →  → 3.jpg.png" />
+    <Content Include="assest\img\18 →  → 4.jpg.png" />
+    <Content Include="assest\img\18 →  → 5.jpg.png" />
+    <Content Include="assest\img\anh_cuoi.png" />
+    <Content Include="assest\img\banh_mi.png" />
+    <Content Include="assest\img\Banner.png" />
+    <Content Include="assest\img\banner_cuoi.png" />
+    <Content Include="assest\img\Ba_gach.png" />
+    <Content Include="assest\img\bua_sang.png" />
+    <Content Include="assest\img\div.banner-img %281%29.png" />
+    <Content Include="assest\img\div.banner-img.png" />
+    <Content Include="assest\img\email.png" />
+    <Content Include="assest\img\footer.png" />
+    <Content Include="assest\img\humburger.png" />
+    <Content Include="assest\img\humburger2.png" />
+    <Content Include="assest\img\i.ri-heart-3-line.png" />
+    <Content Include="assest\img\i.ri-shopping-cart-line.png" />
+    <Content Include="assest\img\kem.png" />
+    <Content Include="assest\img\Logo_nha_hang.png" />
+    <Content Include="assest\img\menu.png" />
+    <Content Include="assest\img\monney.png" />
+    <Content Include="assest\img\monney1.png" />
+    <Content Include="assest\img\monney2.png" />
+    <Content Include="assest\img\monney3.png" />
+    <Content Include="assest\img\monney4.png" />
+    <Content Include="assest\img\nuoc_cam.png" />
+    <Content Include="assest\img\person.png" />
+    <Content Include="assest\img\phone.png" />
+    <Content Include="assest\img\product1.png" />
+    <Content Include="assest\img\product2.png" />
+    <Content Include="assest\img\product3.png" />
+    <Content Include="assest\img\product4.png" />
+    <Content Include="assest\img\rau.png" />
+    <Content Include="assest\img\rau1.png" />
+    <Content Include="assest\img\rau2.png" />
+    <Content Include="assest\img\rau3.png" />
+    <Content Include="assest\img\salad.png" />
+    <Content Include="assest\img\salad1.png" />
+    <Content Include="assest\img\salad2.png" />
+    <Content Include="assest\img\salad3.png" />
+    <Content Include="assest\img\search.png" />
+    <Content Include="assest\img\sent.png" />
+    <Content Include="assest\img\shipper.png" />
+    <Content Include="assest\img\t1.png" />
+    <Content Include="assest\img\t2.png" />
+    <Content Include="assest\img\t3.png" />
+    <Content Include="assest\img\t4.png" />
+    <Content Include="assest\img\t5.png" />
+    <Content Include="assest\img\tomato.png" />
+    <Content Include="assest\img\vi_tri.png" />
+    <Content Include="assest\img\ớt.png" />
+    <Content Include="assest\js\page3.js" />
+    <Content Include="assest\js\test.js" />
+    <Content Include="assest\js\test1.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -224,6 +284,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\slider.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -232,13 +293,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Auth\Register.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Auth\ResetPassword.cshtml" />
+    <Content Include="Views\Shared\_LayoutNavigato.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

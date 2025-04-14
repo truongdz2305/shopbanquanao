@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <link rel="stylesheet" href="~/assest/css/test.css">
+    <link rel="stylesheet" href="~/assest/css/layout_footer.css" />
+</head>
+<body>
+    <header class="border-bottom">
+        <!-- Top Bar -->
+        <div class="top-bar py-1 bg-light border-bottom">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <a href="#"><img src="../assest/img/Ba_gach.png" alt="Logo" style="height:30px;"></a>
+                </div>
+                <div class="d-none d-lg-flex">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Category</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Category 1</a></li>
+                                <li><a class="dropdown-item" href="#">Category 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Product 1</a></li>
+                                <li><a class="dropdown-item" href="#">Product 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Page 1</a></li>
+                                <li><a class="dropdown-item" href="#">Page 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Blog 1</a></li>
+                                <li><a class="dropdown-item" href="#">Blog 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Elements</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Element 1</a></li>
+                                <li><a class="dropdown-item" href="#">Element 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-telephone-fill me-2"></i> +123 (456) (7890)
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-md-3 d-flex align-items-center mb-3 mb-md-0">
+                    <img src="../assest/img/Logo_nha_hang.png" alt="Logo" class="me-2">
+                    <div>
+                        <div class="logo-text">Foodzy</div>
+                        <div class="logo-subtext">A Treasure of Tastes</div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <form class="w-100">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for items...">
+                            <select class="form-select" style="max-width: 150px;">
+                                <option>All Categories</option>
+                                <option>Category 1</option>
+                                <option>Category 2</option>
+                            </select>
+                            <button class="btn btn-primary" style="background-color:black;" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-center justify-content-end">
+                    <div class="icon-text me-4">
+                        <img src="../assest/img/person.png" class="icon-img" />
+                        <span>Account</span>
+                    </div>
+                    <div class="icon-text me-4">
+                        <img src="../assest/img/i.ri-heart-3-line.png" class="icon-img" />
+                        <span>Wishlist</span>
+                    </div>
+                    <div class="icon-text">
+                        <img src="../assest/img/i.ri-shopping-cart-line.png" class="icon-img" />
+                        <span>Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="bg-gray-50">
+
+        <div class="bg-white py-10">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+                    <!-- Logo and Info -->
+                    <div class="col-span-1">
+                        <div class="flex items-center mb-4">
+                            <img src="../assest/img/Logo_nha_hang.png" alt="Company Logo" class="w-12 h-12 rounded-full" />
+                            <div class="ml-3">
+                                <h2 class="text-xl font-bold">Foodzy</h2>
+                                <p class="text-sm text-gray-500">A Treasure of Tastes</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            FoodTrove is the biggest market of grocery products. Get your daily needs from our store.
+                        </p>
+                        <ul class="text-gray-600">
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                                51 Green St. Huntington ohaio beach ontario, NY 11746 KY 4783, USA.
+                            </li>
+                            <li class="flex items-center mb-2">
+                                <i class="fas fa-envelope text-red-500 mr-2"></i>
+                                example@email.com
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt text-red-500 mr-2"></i>
+                                +91 123 4567890
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Links -->
+                    <div class="col-span-1">
+                        <h3 class="text-lg font-bold mb-4">Company</h3>
+                        <ul class="text-gray-600">
+                            <li class="mb-2"><a href="#">About Us</a></li>
+                            <li class="mb-2"><a href="#">Delivery Information</a></li>
+                            <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                            <li class="mb-2"><a href="#">Terms & Conditions</a></li>
+                            <li class="mb-2"><a href="#">Contact Us</a></li>
+                            <li><a href="#">Support Center</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Category Links -->
+                    <div class="col-span-1">
+                        <h3 class="text-lg font-bold mb-4">Category</h3>
+                        <ul class="text-gray-600">
+                            <li class="mb-2"><a href="#">Dairy & Bakery</a></li>
+                            <li class="mb-2"><a href="#">Fruits & Vegetable</a></li>
+                            <li class="mb-2"><a href="#">Snack & Spice</a></li>
+                            <li class="mb-2"><a href="#">Juice & Drinks</a></li>
+                            <li class="mb-2"><a href="#">Chicken & Meat</a></li>
+                            <li><a href="#">Fast Food</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter & Social -->
+                    <div class="col-span-1">
+                        <h3 class="text-lg font-bold mb-4">Subscribe Our Newsletter</h3>
+                        <div class="flex mb-4">
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none" placeholder="Search here..." />
+                            <button class="px-4 py-2 bg-gray-300 text-white rounded-r-md">
+                                <img src="../assest/img/sent.png" alt="Send" class="w-5 h-5" />
+                            </button>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <a href="#" class="text-gray-600"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-gray-600"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-600"><i class="fab fa-dribbble"></i></a>
+                            <a href="#" class="text-gray-600"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="flex space-x-2">
+                            <img src="../assest/img/18 →  → 1.jpg.png" alt="Image 1" class="w-12 h-12 rounded-md" />
+                            <img src="../assest/img/18 →  → 2.jpg.png" alt="Image 2" class="w-12 h-12 rounded-md" />
+                            <img src="../assest/img/18 →  → 3.jpg.png" alt="Image 3" class="w-12 h-12 rounded-md" />
+                            <img src="../assest/img/18 →  → 4.jpg.png" alt="Image 4" class="w-12 h-12 rounded-md" />
+                            <img src="../assest/img/18 →  → 5.jpg.png" alt="Image 5" class="w-12 h-12 rounded-md" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="text-center mt-8 text-gray-600">
+                    © 2025 <span class="text-red-500">foodzy</span>, All rights reserved.
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

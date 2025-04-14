@@ -1,0 +1,64 @@
+.top-bar {
+    background-color: #f8f9fa;
+    font-size: 14px;
+}
+
+.search-bar {
+    border: 1px solid #d1e7dd;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+.search-bar input {
+    border: none;
+    flex: 1;
+    padding: 10px;
+    outline: none;
+}
+
+.search-bar select {
+    border: none;
+    padding: 10px;
+    border-left: 1px solid #d1e7dd;
+    background-color: #fff;
+}
+
+.search-bar button {
+    background-color: #212529;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 0px; /* icon sát chữ */
+}
+
+.icon-text span {
+    font-size: 14px;
+    color: #333;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.logo-subtext {
+    font-size: 12px;
+    color: gray;
+}
